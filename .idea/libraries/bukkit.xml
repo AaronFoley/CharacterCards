@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="bukkit">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/bukkit.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/TownyChat.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/Vault.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-core-2.4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-databind-2.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-annotations-2.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libs/bukkit.jar!/" />
+    </SOURCES>
+  </library>
+</component>

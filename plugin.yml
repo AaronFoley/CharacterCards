@@ -1,0 +1,47 @@
+name: CharacterCards
+main: com.kaltiz.cc.CharacterCards
+version: 1.2
+description: Adds Character Cards that Integrate with towny chat
+author: Kaltiz
+depend: [Vault,TownyChat]
+commands:
+  cc:
+    description: Command used to create and delete character cards
+    usage: /<command>
+  ccadmin:
+    description: command used to administrate character cards
+    usage: /<command>
+permissions:
+  cc.admin:
+    description: Gives access to a admin commands
+    default: false
+  cc.command.card:
+    description: Gives access to the card command
+    default: true
+  cc.command.help:
+    description: allows the player to view the help
+    default: true
+  cc.command.whois:
+    description: Allows player to lookup based on RP name
+    default: true
+  cc.command.set:
+    description: Allows player to set fields
+    default: true
+  cc.command.unset:
+    description: Allows player to unset fields
+    default: true
+  cc.command.fields:
+    description: Allows the player to view avaliable fields
+    default: true
+  cc.command.version:
+    description: Allows the player to view avaliable fields
+    default: true
+  cc.color:
+    description: Allows the player to use Color tags in their character card
+    default: false
+  cc.channel.*:
+    description: Gives access to different channels
+    default: false
+  cc.fields.*:
+    description: Gives access to different fields
+    default: true

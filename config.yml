@@ -1,0 +1,116 @@
+# ------------------------ General ----------------------- #
+
+# whether shift + clicking a player will show player's Card
+useShiftClick: true
+
+# ------------------------ Storage ----------------------- #
+
+storage:
+  # Storage type to store titles of player
+  # Possible values: 'file' and 'database'
+  type: file
+  # Database settings
+  database:
+    # Database driver. Possible values: MYSQL
+    # More Databases may come later
+    driver: ''
+    # Url of the database
+    url: ''
+    # Username for database
+    username: ''
+    # Password for database
+    password: ''
+
+# ------------------------ Fields ------------------------ #
+
+# The field to search players by
+searchField: name
+
+#  Fields Settings
+#    type - Either int or string
+#    default - The default value of the field
+#    unique - True/False Whether this field should be unique
+#  
+#  String Specific Settings
+#    size - The maximum length of a string
+#    options - a list of values this field can have
+#
+#  Int Specific Settings
+#    min - The mininum value
+#    max - the maximum value
+
+fields:
+  Title:
+    type: string
+    size: 20
+    default: ''
+  Name:
+    type: string
+    size: 25
+    default: ''
+  Gender:
+    type: string
+    options:
+    - Male
+    - Female
+    - Other
+    default: ''
+  Age:
+    type: int
+    max: 200
+    min: 1
+    default: ''
+  Occupation:
+    type: string
+    size: 20
+    default: ''
+  Appearance:
+    type: string
+    size: 40
+    default: ''
+
+# ------------------------ Chat -------------------------- #
+
+# The ChatManager to link RP channels into
+# Options
+#   none      - No Channels
+#   mc        - Default SMP chat will be used
+#   TownyChat - TownyChat will be used
+chatManager: 'TownyChat'
+
+# Fields that will be displayed instead of the players actual name
+displayNameFields:
+- Title
+- Name
+
+# Different channels to use
+# Todo Explain this a bit more
+chatChannels:
+  me:
+    commands: [me]
+    permission: 'cc.channel.me'
+    min: 25
+    max: 25
+    channelTag: '&o&e*'
+    format: "<channelTag> <player> <message>"
+  whp:
+    commands: [whp]
+    permission: 'cc.channel.whipser'
+    min: 5
+    max: 10
+    channelTag: '&f[&8WHP&f]'
+    format: "<channelTag> &e<player>&f: &8<message>"
+  rp:
+    commands: [rp]
+    permission: 'cc.channel.rp'
+    min: 25
+    max: 50
+    channelTag: '&f[&9RP&f]'
+    format: "<channelTag> &e<player>&f: &9<message>"
+  yell:
+    commands: [yell]
+    permission: 'cc.channel.yell'
+    min: 50
+    max: 100
+    channelTag: '&f[&5YELL&f]'
+    format: "<channelTag> &e<player>&f: &5<message>"

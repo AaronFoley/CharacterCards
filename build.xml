@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<project default="all">
+
+	<path id="libs-classpath">
+		<fileset dir="libs">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml" />
+
+	<target name="all">
+		<antcall target="clean"/>
+		<antcall target="RoleplayAddon"/>
+		<mkdir dir="./out"/>
+	</target>
+
+	<target name="RoleplayAddon">
+		<mkdir dir="./bin"/>
+
+		<javac destdir="./bin" includeantruntime="false">
+			<src path="./src"/>
+			<classpath refid="libs-classpath"/>
+		</javac>
+
+		<jar destfile="./out/RoleplayAddon.jar">
+			<fileset>
+				<include name="*"/>
+				<exclude name=".classpath"/>
+				<exclude name=".project"/>
+			</fileset>
+			<fileset dir="./bin"/>
+		</jar>
+
+	</target>
+
+	<target name="clean">
+		  <delete includeEmptyDirs="true">
+    		<!--<fileset dir="./output/"/>-->
+    		<fileset dir="." includes="**/bin/**"/>
+  		</delete>
+	</target>
+</project>
