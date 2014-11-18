@@ -1,6 +1,5 @@
 package com.kaltiz.cc;
 
-import com.atherys.listeners.PlayerWatchListener;
 import com.kaltiz.cc.character.CharacterManager;
 import com.kaltiz.cc.chat.ChatManager;
 import com.kaltiz.cc.chat.SMPChatManager;
