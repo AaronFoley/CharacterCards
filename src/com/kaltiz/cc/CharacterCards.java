@@ -50,7 +50,6 @@ public class CharacterCards extends JavaPlugin
 
         // Setup Listeners
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
-        getServer().getPluginManager().registerEvents(new PlayerWatchListener(), this);
 
         // Setup Commands
         commandHandler = new CommandHandler(this);
